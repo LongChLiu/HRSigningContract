@@ -37,9 +37,8 @@ end
         }];
 ```
 ##### 返回的code说明（参考）
-<style> table th:first-of-type {width: 100px; } table th:nth-of-type(2) {width: 300px; } </style> 
-编号|描述
-:--:|:--
+编 号|描 述
+|:-----------:|:-------------|
 -301|订单号为空
 -302|合作商户号为空
 1000|调用sdk页面成功了
