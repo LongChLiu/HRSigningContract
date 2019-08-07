@@ -1,10 +1,10 @@
-##HRSigningContract
-##惠瀜电子签约SDK
-###手动集成方式
+## HRSigningContract
+## 惠瀜电子签约SDK
+### 手动集成方式
 下载项目，将依赖包放入项目中，引入libstdc++。
 替换bundle中的授权文件。
-###cocospods集成方式
-####podfile
+### cocospods集成方式
+#### podfile
 ```
 platform :ios, '8.0'
 target 'TargetName' do
@@ -12,10 +12,10 @@ pod 'HRSigningContract','~>1.2.0'
 end
 ```
 执行 `pod install`，将授权文件（lic）放入贵公司项目下即可。
-####使用方式
+#### 使用方式
 直接在需要的类中 `#import <HRSigningContract/HRSigningContractInterface.h>`
 使用`-（void）hrSigningContractOrderNo:assurerNo:domainNameSystem:successAlert:bankCardCertificationResult:signComplete:error`
-#####参数说明：
+##### 参数说明：
 * orderNo 订单号
 * assurerNo 合作商户号
 * hrdns sdk环境 1开发环境 2生产环境 3银行测试环境
@@ -23,9 +23,9 @@ end
 * bankCardCertificationResult 四要素认证结果返回
 * signComplete 签署成功回调
 * error 页面跳转失败，1.有些参数为nil 2.接口请求失败或者没有
-#####例子：
+##### 例子：
 ```
- [[HRSigningContractInterface sharedUtil] hrSigningContractOrderNo:@"BPA2101906001212" assurerNo:@"D20103300" domainNameSystem:@"3" successAlert:^(NSDictionary *successAlertDic) {
+[[HRSigningContractInterface sharedUtil] hrSigningContractOrderNo:@"BPA2101906001212" assurerNo:@"D20103300" domainNameSystem:@"3" successAlert:^(NSDictionary *successAlertDic) {
             NSLog(@"%@", successAlertDic);
         } bankCardCertificationResult:^(NSDictionary *bankCardCertificationResultDic) {
             NSLog(@"%@", bankCardCertificationResultDic);
@@ -36,7 +36,7 @@ end
    
         }];
 ```
-#####返回的code说明（参考）
+##### 返回的code说明（参考）
 <style> table th:first-of-type {width: 100px; } table th:nth-of-type(2) {width: 300px; } </style> 
 编号|描述
 :--:|:--
