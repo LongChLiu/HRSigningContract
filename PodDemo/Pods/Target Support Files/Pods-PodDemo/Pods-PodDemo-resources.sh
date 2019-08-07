@@ -97,12 +97,12 @@ EOM
   esac
 }
 if [[ "$CONFIGURATION" == "Debug" ]]; then
-  install_resource "${PODS_ROOT}/../../Resources/BHFace_Resource.bundle"
-  install_resource "${PODS_ROOT}/../../Resources/HRSigningContract.bundle"
+  install_resource "${PODS_ROOT}/HRSigningContract/Resources/BHFace_Resource.bundle"
+  install_resource "${PODS_ROOT}/HRSigningContract/Resources/HRSigningContract.bundle"
 fi
 if [[ "$CONFIGURATION" == "Release" ]]; then
-  install_resource "${PODS_ROOT}/../../Resources/BHFace_Resource.bundle"
-  install_resource "${PODS_ROOT}/../../Resources/HRSigningContract.bundle"
+  install_resource "${PODS_ROOT}/HRSigningContract/Resources/BHFace_Resource.bundle"
+  install_resource "${PODS_ROOT}/HRSigningContract/Resources/HRSigningContract.bundle"
 fi
 
 mkdir -p "${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}"

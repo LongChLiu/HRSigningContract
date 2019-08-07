@@ -2,8 +2,8 @@ platform :ios, '8.0'
 use_frameworks!
 
 target 'PodDemo' do
-  pod 'HRSigningContract' , :path => '../'
-  # pod 'HRBocSignContract'
+#  pod 'HRSigningContract' , :path => '../'
+  pod 'HRSigningContract'
 end
 
 post_install do |installer|
