@@ -7,8 +7,18 @@
 #### podfile
 ```
 platform :ios, '8.0'
+use_frameworks!
 target 'TargetName' do
-pod 'HRSigningContract','~>1.2.0'
+pod 'HRSigningContract','~>1.3.0'
+end
+
+post_install do |installer|
+installer.pods_project.targets.each do |target|
+target.build_configurations.each do |config|
+config.build_settings['ARCHS'] = "arm64 armv7"
+config.build_settings['ENABLE_BITCODE'] = 'NO'
+end
+end
 end
 ```
 执行 `pod install`，将授权文件（lic）放入贵公司项目下即可。
