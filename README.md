@@ -24,7 +24,7 @@ end
 执行 `pod install`，将授权文件（lic）放入贵公司项目下即可。
 #### 使用方式
 直接在需要的类中 `#import <HRSigningContract/HRSigningContractInterface.h>`
-使用`-（void）hrSigningContractOrderNo:assurerNo:domainNameSystem:successAlert:bankCardCertificationResult:signComplete:error`
+使用`-（void）signingContractOrderNo:assurerNo:domainNameSystem:successAlert:bankCardCertificationResult:signComplete:error`
 ##### 参数说明：
 * orderNo 订单号
 * assurerNo 合作商户号
@@ -35,7 +35,7 @@ end
 * error 页面跳转失败，1.有些参数为nil 2.接口请求失败或者没有
 ##### 例子：
 ```
-[[HRSigningContractInterface sharedUtil] hrSigningContractOrderNo:@"BPA2101906001212" assurerNo:@"D20103300" domainNameSystem:@"3" successAlert:^(NSDictionary *successAlertDic) {
+[[HRSigningContractInterface sharedUtil] signingContractOrderNo:@"BPA2101906001212" assurerNo:@"D20103300" domainNameSystem:@"3" successAlert:^(NSDictionary *successAlertDic) {
             NSLog(@"%@", successAlertDic);
         } bankCardCertificationResult:^(NSDictionary *bankCardCertificationResultDic) {
             NSLog(@"%@", bankCardCertificationResultDic);
