@@ -1,0 +1,101 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14490.70" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" colorMatched="YES" initialViewController="1rl-3V-BTM">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14490.49"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="2Qc-qv-kXL"/>
+                        <viewControllerLayoutGuide type="bottom" id="DqG-Oc-vRe"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="iCu-EH-Q4M"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1716" y="-599.55022488755628"/>
+        </scene>
+        <!--FirstVC View Controller-->
+        <scene sceneID="0jK-G7-sTR">
+            <objects>
+                <viewController id="XkG-WA-Suh" customClass="FirstVCViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="C1E-J6-80d"/>
+                        <viewControllerLayoutGuide type="bottom" id="Xax-3x-TIo"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="Ul0-pL-QDU">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="USl-DO-qBI">
+                                <rect key="frame" x="137.5" y="164" width="100" height="100"/>
+                                <color key="backgroundColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="100" id="7C3-tx-d8M"/>
+                                    <constraint firstAttribute="height" constant="100" id="Heh-7B-H7E"/>
+                                </constraints>
+                                <state key="normal" title="present电子签约"/>
+                                <connections>
+                                    <segue destination="BYZ-38-t0r" kind="modal" id="4T3-sd-lWm"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="FBp-LP-LxC">
+                                <rect key="frame" x="137.5" y="364" width="100" height="100"/>
+                                <color key="backgroundColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="100" id="Zq4-z7-3dQ"/>
+                                    <constraint firstAttribute="height" constant="100" id="qRy-ku-PXy"/>
+                                </constraints>
+                                <state key="normal" title="Nav电子签约"/>
+                                <connections>
+                                    <action selector="push:" destination="XkG-WA-Suh" eventType="touchUpInside" id="RnY-1x-fFF"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="FBp-LP-LxC" firstAttribute="centerX" secondItem="Ul0-pL-QDU" secondAttribute="centerX" id="8yA-18-6iT"/>
+                            <constraint firstItem="USl-DO-qBI" firstAttribute="top" secondItem="C1E-J6-80d" secondAttribute="bottom" constant="100" id="Li8-eh-Q7m"/>
+                            <constraint firstItem="FBp-LP-LxC" firstAttribute="top" secondItem="USl-DO-qBI" secondAttribute="bottom" constant="100" id="qfC-gp-nbt"/>
+                            <constraint firstItem="USl-DO-qBI" firstAttribute="centerX" secondItem="Ul0-pL-QDU" secondAttribute="centerX" id="ti0-pM-huS"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="PiI-H6-9eJ"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="LRd-hU-oGJ" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="800.79999999999995" y="-599.55022488755628"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="FF5-qK-zmH">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="1rl-3V-BTM" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="aVz-SX-tJx">
+                        <rect key="frame" x="0.0" y="20" width="375" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="XkG-WA-Suh" kind="relationship" relationship="rootViewController" id="rrM-yT-vsc"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="djG-Zx-IGz" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-138.40000000000001" y="-599.55022488755628"/>
+        </scene>
+    </scenes>
+</document>

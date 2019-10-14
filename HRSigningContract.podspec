@@ -8,7 +8,7 @@
 
 Pod::Spec.new do |s|
   s.name             = 'HRSigningContract'
-  s.version          = '1.2.0'
+  s.version          = '1.3.0'
   s.summary          = '电子签约SDK'
 
   s.description      = <<-DESC
@@ -31,5 +31,6 @@ Pod::Spec.new do |s|
   s.dependency 'IQKeyboardManager'
   s.dependency 'Toast', '~> 4.0.0'
   s.dependency 'Masonry'
-
+  s.dependency 'eRelyOnLib'
+  s.dependency 'eRelyOnLibFile'
 end
