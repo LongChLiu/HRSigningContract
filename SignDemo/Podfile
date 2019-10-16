@@ -3,7 +3,7 @@ use_frameworks!
 
 target 'SignDemo' do
   pod 'HRSigningContract' , :path => '../'
-  #pod 'HRSigningContract'
+  #pod 'HRSigningContract',:git=>'https://github.com/bizhanlu/HRSigningContract.git'
 end
 
 post_install do |installer|

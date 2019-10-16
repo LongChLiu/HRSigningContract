@@ -31,6 +31,5 @@ Pod::Spec.new do |s|
   s.dependency 'IQKeyboardManager'
   s.dependency 'Toast', '~> 4.0.0'
   s.dependency 'Masonry'
-  s.dependency 'eRelyOnLib'
-  s.dependency 'eRelyOnLibFile'
+  s.dependency 'HRLivingBodyDetection/GHSdkLib'
 end

@@ -19,6 +19,9 @@ FOUNDATION_EXPORT const unsigned char HRSigningContractVersionString[];
 
 @interface HRSigningContractInterface : NSObject
 
+@property(nonatomic,strong) NSString* orderNo;
+@property(nonatomic,strong) NSString* assurerNo;
+
 /**
  *  类方法
  */
