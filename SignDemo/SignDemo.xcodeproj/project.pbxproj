@@ -25,10 +25,6 @@
 		9F11221822F1493B00261409 /* FirstVCViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = FirstVCViewController.h; sourceTree = "<group>"; };
 		9F11221922F1493B00261409 /* FirstVCViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = FirstVCViewController.m; sourceTree = "<group>"; };
 		9F13D8742354629F0056753C /* bh_liveness.lic */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = bh_liveness.lic; sourceTree = "<group>"; };
-		9F21AA1622D42E29007E860B /* BHFaceDetector.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = BHFaceDetector.framework; path = "../hrSigningContract/hrSigningContract/hrSigningContract/Third/活体检测/BHFaceDetector.framework"; sourceTree = "<group>"; };
-		9F29F37622CF34E000EB1D9B /* hrSigningContract.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = hrSigningContract.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		9F60ED502351B64600ACC8BF /* HRSigningContract.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = HRSigningContract.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		9F60ED522351B67200ACC8BF /* HRSigningContract.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = HRSigningContract.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		B3F808B532EDB6A4398BB7CE /* Pods-SignDemo.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SignDemo.debug.xcconfig"; path = "Pods/Target Support Files/Pods-SignDemo/Pods-SignDemo.debug.xcconfig"; sourceTree = "<group>"; };
 		D65A8FEF40A555A731F3EBF8 /* Pods_SignDemo.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_SignDemo.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		E83A7AF42240F6610065ABFA /* HRSaving.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HRSaving.m; sourceTree = "<group>"; };
@@ -62,10 +58,6 @@
 		58ACF087CF0F9EBACF8A605C /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				9F60ED522351B67200ACC8BF /* HRSigningContract.framework */,
-				9F60ED502351B64600ACC8BF /* HRSigningContract.framework */,
-				9F21AA1622D42E29007E860B /* BHFaceDetector.framework */,
-				9F29F37622CF34E000EB1D9B /* hrSigningContract.framework */,
 				E83F0D482174733900B55FDE /* libstdc++.tbd */,
 				D65A8FEF40A555A731F3EBF8 /* Pods_SignDemo.framework */,
 			);
