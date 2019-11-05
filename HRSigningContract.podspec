@@ -21,15 +21,9 @@ Pod::Spec.new do |s|
   s.author           = { 'bizhanlu' => 'bizhanlu@hrfax.cn' }
   s.source           = { :git => 'https://github.com/bizhanlu/HRSigningContract.git', :tag => s.version.to_s }
   s.ios.deployment_target = '8.0'
-
   s.vendored_frameworks = 'Frameworks/*'
   s.resources = 'Resources/*'
   s.libraries = 'stdc++'
-  s.dependency 'AFNetworking'
-  s.dependency 'MJRefresh'
-  s.dependency 'SDWebImage', '~> 5.0.6'
-  s.dependency 'IQKeyboardManager'
-  s.dependency 'Toast', '~> 4.0.0'
-  s.dependency 'Masonry'
+
   s.dependency 'HRLivingBodyDetection/GHSdkLib'
 end
