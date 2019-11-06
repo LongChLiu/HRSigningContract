@@ -13,21 +13,12 @@ typedef void(^bankCardCertificationResultBlock)(NSDictionary *bankCardCertificat
 
 typedef void(^signCompleteBlock)(NSDictionary *signCompleteDic);
 
-//! Project version string for YourSDK.
-FOUNDATION_EXPORT const unsigned char HRSigningContractVersionString[];
-
-
-@interface HRSigningContractInterface : NSObject
-
-@property(nonatomic,strong) NSString* orderNo;
-@property(nonatomic,strong) NSString* assurerNo;
+@interface hrSigningContractInterface : NSObject
 
 /**
  *  类方法
  */
-+ (HRSigningContractInterface *)sharedUtil;
-
-+ (NSString *)getSdkVersion;
++ (hrSigningContractInterface *)sharedUtil;
 
 /**
  电子签约调用
@@ -41,7 +32,7 @@ FOUNDATION_EXPORT const unsigned char HRSigningContractVersionString[];
 
  */
 //
-- (void)signingContractOrderNo:(NSString *)orderNo assurerNo:(NSString *)assurerNo  domainNameSystem:(NSString *)hrdns successAlert:(successAlertResultBlock)successAlert bankCardCertificationResult:(bankCardCertificationResultBlock)bankCardCertificationResult signComplete:(signCompleteBlock)signComplete  error:(errorResultBlock)error;
+- (void)hrSigningContractOrderNo:(NSString *)orderNo assurerNo:(NSString *)assurerNo  domainNameSystem:(NSString *)hrdns successAlert:(successAlertResultBlock)successAlert bankCardCertificationResult:(bankCardCertificationResultBlock)bankCardCertificationResult signComplete:(signCompleteBlock)signComplete  error:(errorResultBlock)error;
 
 
 @end
