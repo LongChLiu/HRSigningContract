@@ -9,7 +9,6 @@
 /* Begin PBXBuildFile section */
 		46E77369123E2293AC6A9BCD /* Pods_SignDemo.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D65A8FEF40A555A731F3EBF8 /* Pods_SignDemo.framework */; };
 		9F11221A22F1493B00261409 /* FirstVCViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9F11221922F1493B00261409 /* FirstVCViewController.m */; };
-		9F13D8752354629F0056753C /* bh_liveness.lic in Resources */ = {isa = PBXBuildFile; fileRef = 9F13D8742354629F0056753C /* bh_liveness.lic */; };
 		E83A7AF62240F6620065ABFA /* HRSaving.m in Sources */ = {isa = PBXBuildFile; fileRef = E83A7AF42240F6610065ABFA /* HRSaving.m */; };
 		E83F0D1221746E2400B55FDE /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = E83F0D1121746E2400B55FDE /* AppDelegate.m */; };
 		E83F0D1521746E2400B55FDE /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E83F0D1421746E2400B55FDE /* ViewController.m */; };
@@ -24,7 +23,6 @@
 		45DE6C35EFBBE72AFB82E5B0 /* Pods-SignDemo.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SignDemo.release.xcconfig"; path = "Pods/Target Support Files/Pods-SignDemo/Pods-SignDemo.release.xcconfig"; sourceTree = "<group>"; };
 		9F11221822F1493B00261409 /* FirstVCViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = FirstVCViewController.h; sourceTree = "<group>"; };
 		9F11221922F1493B00261409 /* FirstVCViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = FirstVCViewController.m; sourceTree = "<group>"; };
-		9F13D8742354629F0056753C /* bh_liveness.lic */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = bh_liveness.lic; sourceTree = "<group>"; };
 		B3F808B532EDB6A4398BB7CE /* Pods-SignDemo.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SignDemo.debug.xcconfig"; path = "Pods/Target Support Files/Pods-SignDemo/Pods-SignDemo.debug.xcconfig"; sourceTree = "<group>"; };
 		D65A8FEF40A555A731F3EBF8 /* Pods_SignDemo.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_SignDemo.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		E83A7AF42240F6610065ABFA /* HRSaving.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HRSaving.m; sourceTree = "<group>"; };
@@ -64,14 +62,6 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
-		9F13D8732354629F0056753C /* lic */ = {
-			isa = PBXGroup;
-			children = (
-				9F13D8742354629F0056753C /* bh_liveness.lic */,
-			);
-			path = lic;
-			sourceTree = "<group>";
-		};
 		E83F0D0421746E2400B55FDE = {
 			isa = PBXGroup;
 			children = (
@@ -93,7 +83,6 @@
 		E83F0D0F21746E2400B55FDE /* SignDemo */ = {
 			isa = PBXGroup;
 			children = (
-				9F13D8732354629F0056753C /* lic */,
 				E83F0D1021746E2400B55FDE /* AppDelegate.h */,
 				E83F0D1121746E2400B55FDE /* AppDelegate.m */,
 				E83F0D1321746E2400B55FDE /* ViewController.h */,
@@ -132,7 +121,7 @@
 				E83F0D0A21746E2400B55FDE /* Frameworks */,
 				E83F0D0B21746E2400B55FDE /* Resources */,
 				42CEDE22A934563F00F2BEA0 /* [CP] Embed Pods Frameworks */,
-				6E0C83273F04579BA176D0E4 /* [CP] Copy Pods Resources */,
+				E24440427EA4D720E461A8AC /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -181,7 +170,6 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				9F13D8752354629F0056753C /* bh_liveness.lic in Resources */,
 				E83F0D1D21746E2600B55FDE /* LaunchScreen.storyboard in Resources */,
 				E83F0D1A21746E2600B55FDE /* Assets.xcassets in Resources */,
 				E83F0D1821746E2400B55FDE /* Main.storyboard in Resources */,
@@ -226,7 +214,7 @@
 			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-SignDemo/Pods-SignDemo-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
-		6E0C83273F04579BA176D0E4 /* [CP] Copy Pods Resources */ = {
+		E24440427EA4D720E461A8AC /* [CP] Copy Pods Resources */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -400,14 +388,21 @@
 				CODE_SIGN_STYLE = Manual;
 				DEVELOPMENT_TEAM = 335X85BJF8;
 				ENABLE_BITCODE = NO;
-				FRAMEWORK_SEARCH_PATHS = "$(inherited)";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"\"$(PODS_ROOT)/../hrSigningContract/hrSigningContract/hrSigningContract/Third\"/**",
+				);
 				INFOPLIST_FILE = SignDemo/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				LIBRARY_SEARCH_PATHS = "$(inherited)";
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/SignDemo/FaceRecognitionSDK/BHResourceDependence",
+					"$(PROJECT_DIR)/SignDemo/hrface",
+				);
 				OTHER_LDFLAGS = (
 					"$(inherited)",
 					"-framework",
@@ -437,14 +432,21 @@
 				CODE_SIGN_STYLE = Manual;
 				DEVELOPMENT_TEAM = 2ZQHQQJ24M;
 				ENABLE_BITCODE = NO;
-				FRAMEWORK_SEARCH_PATHS = "$(inherited)";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"\"$(PODS_ROOT)/../hrSigningContract/hrSigningContract/hrSigningContract/Third\"/**",
+				);
 				INFOPLIST_FILE = SignDemo/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				LIBRARY_SEARCH_PATHS = "$(inherited)";
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/SignDemo/FaceRecognitionSDK/BHResourceDependence",
+					"$(PROJECT_DIR)/SignDemo/hrface",
+				);
 				OTHER_LDFLAGS = (
 					"$(inherited)",
 					"-framework",

@@ -9,7 +9,7 @@
 #import "ViewController.h"
 #import <Toast/Toast.h>
 #import "HRSaving.h"
-#import <HRSigningContract/HRSigningContractInterface.h>
+#import <hrSigningContract/hrSigningContractInterface.h>
 @interface ViewController (){
     UITextField *textFile;
     UITextField *textFile1;
@@ -20,8 +20,6 @@
 @implementation ViewController
 - (void)viewDidLoad {
     [super viewDidLoad];
-    
-    NSLog(@"version================%@",[HRSigningContractInterface getSdkVersion]);
     
     self.view.backgroundColor = [UIColor whiteColor];
     self.edgesForExtendedLayout =  UIRectEdgeLeft | UIRectEdgeBottom | UIRectEdgeRight;
@@ -66,13 +64,13 @@
 //    
     textFile.text= @"BPA2101907000044";
     textFile1.text = @"D20103300";
-//    
-//    textFile.text= @"9238631085885440";
-//    textFile1.text = @"S36024460";
     
 //    textFile.text= @"zhsd20193818911a96";
 //    textFile1.text = @"S10011930";
     
+    
+    
+
 //
 //    textFile.text= @"vxdb000220190730160431328";
 //    textFile1.text = @"S04026363";
@@ -95,7 +93,7 @@
 
     if (textFile.text.length > 0) {
     
-    [[HRSigningContractInterface sharedUtil] signingContractOrderNo:textFile.text assurerNo:textFile1.text domainNameSystem:@"3" successAlert:^(NSDictionary *successAlertDic) {
+    [[hrSigningContractInterface sharedUtil] hrSigningContractOrderNo:textFile.text assurerNo:textFile1.text domainNameSystem:@"3" successAlert:^(NSDictionary *successAlertDic) {
         NSLog(@"%@", successAlertDic);
         [self.view hideToastActivity];
     } bankCardCertificationResult:^(NSDictionary *bankCardCertificationResultDic) {
