@@ -24,6 +24,4 @@ Pod::Spec.new do |s|
   s.vendored_frameworks = 'Frameworks/*'
   s.resources = 'Resources/*'
   s.libraries = 'stdc++'
-
-  s.dependency 'HRLivingBodyDetection/GHSdkLib'
 end

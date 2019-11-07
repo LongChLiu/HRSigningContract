@@ -1,9 +1,13 @@
+
+source 'https://github.com/bizhanlu/BZLSpecs.git'
+source 'https://cdn.cocoapods.org/'
+
 platform :ios, '8.0'
 use_frameworks!
 
 target 'SignDemo' do
-  pod 'HRSigningContract' , :path => '../'
-  #pod 'HRSigningContract',:git=>'https://github.com/bizhanlu/HRSigningContract.git'
+  pod 'HRLivingBodyDetection'
+  pod 'HRSigningContract','1.2.2'
 end
 
 post_install do |installer|

@@ -16,9 +16,15 @@ V1.2.2
 8、修改人像采集，不断切换摄像头导致图片偶尔错乱的问题
 9、调用Api的函数回调signComplete和successAlert回传参数修改，主要去掉isAutomaticNotice无用参数（见集成文档）
 
-V1.3.0
+V1.2.3
+1、兼容了IOS13的present问题
+
+
+
+V1.7.0
 1、修改部分类名以及方法名命名不规范的问题
 2、添加getSdkVersion方法获取sdk的版本信息
 3、签约记录页面顶部添加tab选项，cell上添加批量重签的功能
+4、兼容了IOS13的机型
 
 
