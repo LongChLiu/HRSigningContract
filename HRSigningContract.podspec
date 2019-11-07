@@ -8,11 +8,11 @@
 
 Pod::Spec.new do |s|
   s.name             = 'HRSigningContract'
-  s.version          = '1.2.2'
+  s.version          = '1.2.3'
   s.summary          = '电子签约SDK'
 
   s.description      = <<-DESC
-                电子签约SDK，用来集成APP
+                电子签约SDK，用来集成APP,包含自己的活体检测sdk
                        DESC
 
   s.homepage         = 'https://github.com/bizhanlu/HRSigningContract'
@@ -24,6 +24,4 @@ Pod::Spec.new do |s|
   s.vendored_frameworks = 'Frameworks/*'
   s.resources = 'Resources/*'
   s.libraries = 'stdc++'
-
-  s.dependency 'HRLivingBodyDetection/GHSdkLib'
 end
